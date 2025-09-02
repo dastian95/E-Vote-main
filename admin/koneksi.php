@@ -1,5 +1,3 @@
 <?php
-
-$koneksi = mysqli_connect("localhost","root","","voting_db")
-
+  $koneksi = mysqli_connect("localhost","root","","voting_db")
 ?>
