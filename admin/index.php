@@ -56,7 +56,6 @@ if (!isset($_SESSION['username'])) {
             <th>Kelas</th>
             <th>Username</th>
           </tr>
-
           <?php
           include "koneksi.php";
           $no = 1;
@@ -72,8 +71,6 @@ if (!isset($_SESSION['username'])) {
 
             $no++;
           }
-
-
           ?>
         </table>
 
