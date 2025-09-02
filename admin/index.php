@@ -49,30 +49,30 @@ if (!isset($_SESSION['username'])) {
     </center>
 
       <center>
-        <table border="5" style="width: 70%; height: 10px">
-          <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>Kelas</th>
-            <th>Username</th>
-          </tr>
-          <?php
-          include "koneksi.php";
-          $no = 1;
-          $ambildata = mysqli_query($koneksi, "select * from voters");
-          while ($tampil = mysqli_fetch_array($ambildata)) {
-            echo "
-                <tr>
-                  <td>$no</td>
-                  <td>$tampil[name]</td>
-                  <td>$tampil[class]</td>
-                  <td>$tampil[Username]</td>
-                </tr>";
-
-            $no++;
-          }
-          ?>
-        </table>
+          <table border="5" style="width: 70%; height: 10px">
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Username</th>
+            </tr>
+            <?php
+            include "koneksi.php";
+            $no = 1;
+            $ambildata = mysqli_query($koneksi, "select * from voters");
+            while ($tampil = mysqli_fetch_array($ambildata)) {
+              echo "
+                  <tr>
+                    <td>$no</td>
+                    <td>$tampil[name]</td>
+                    <td>$tampil[class]</td>
+                    <td>$tampil[Username]</td>
+                  </tr>";
+  
+              $no++;
+            }
+            ?>
+          </table>
 
         <h3> Tambah Anggota </h3>
 
@@ -99,13 +99,11 @@ if (!isset($_SESSION['username'])) {
 
         <?php
         include "koneksi.php";
-
         if (isset($_POST['proses'])) {
           $name = $_POST['name'];
           $class = $_POST['class'];
           $username = $_POST['username'];
           $queryTambah = mysqli_query($koneksi,"INSERT INTO `voters`(`name`, `class`, `Username`, `Password`, `ready`) VALUES ('$name','$class','$username','-','0')");
-
           if ($queryTambah) {
               echo "Data Tersimpan";
               ?>
@@ -114,7 +112,6 @@ if (!isset($_SESSION['username'])) {
           }
         }
         ?>
-
       </center>
 
 
