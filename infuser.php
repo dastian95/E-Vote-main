@@ -1,8 +1,8 @@
 <?php
  session_start();
- include 'assets/conn.php';
+include 'koneksi.php';
 
- if (!isset($_SESSION['nisn'])) {
+if (!isset($_SESSION['authenticated'])||$_SESSION['authenticated'] !== true) {
   header('Location: login.php');
 }
 

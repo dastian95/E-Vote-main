@@ -55,20 +55,15 @@ $ready = $row['ready'];
 	 <h1 class="my-3">Visi dan Misi Kandidat Nomor 2</h1>
   <h5>Visi: </h5>
   <ol>
-    <li>Login ke akun E-Vote yang sudah di berikan.</li>
-    <li>Pilih kandidat yang Anda ingin mendukung.</li>
-    <li>Klik tombol "Detail" pada kartu kandidat untuk melihat profil dan program kerjanya.</li>
-    <li>Setelah memilih, klik tombol "Vote" pada kartu kandidat.</li>
-    <li>Anda hanya dapat memilih satu kandidat untuk setiap posisi.</li>
-    <li>Setelah memilih, Anda tidak dapat mengubah pilihan Anda.</li>
-    <li>Setelah selesai memilih, klik tombol "Logout" untuk keluar dari akun.</li>
+    <li>“Mewujudkan OSIS yang aktif, kreatif, dan solutif sebagai wadah aspirasi serta penggerak aksi nyata bagi seluruh siswa.”</li>
   </ol>
   <h5>Misi: </h5>
   <ul>
-    <li>Hanya siswa yang terdaftar di sekolah ini yang dapat memilih.</li>
-    <li>Setiap siswa hanya dapat memberikan satu suara untuk setiap posisi.</li>
-    <li>Suara yang sudah diberikan tidak dapat diubah.</li>
-    <li>Setiap suara akan dihitung dan diverifikasi oleh panitia pemilihan.</li>
+    <li>Menjadi jembatan yang kuat antara siswa, guru, dan sekolah.</li>
+    <li>Mengadakan program yang mengembangkan minat, bakat, dan kreativitas siswa.</li>
+    <li>Menumbuhkan solidaritas dan kebersamaan melalui kegiatan positif.</li>
+    <li>Mendorong budaya disiplin dan tanggung jawab dengan cara yang menyenangkan.</li>
+    <li>Mengutamakan aksi nyata daripada sekadar formalitas.</li>
   </ul>
 		<br>
 		<div class="row">
@@ -76,13 +71,13 @@ $ready = $row['ready'];
 			<!-- Candidate Card 1 -->
 			<form method="POST">
 			<div class="col-md-4">
-<div class="card">
- <img src="https://i.pinimg.com/736x/c0/26/2e/c0262eb3af1e95eece5b540471ac5a7b.jpg" class="card-img-top" alt="Candidate 1">
- <div class="card-body">
-  <h5 class="card-title">2. Nakano Miku</h5>
-  <p class="card-text">Calon Kandidat Ketua OSIS Nomor 3 Periode 2030 / 2031</p>
-  <a href="../kandidat.php" class="btn btn-secondary">Back</a>
-						<button class="btn btn-danger" name="submit">Vote</button>
+        <div class="card">
+          <img src="https://i.ibb.co.com/VchBf75Z/2.png" class="card-img-top" alt="Candidate 1">
+          <div class="card-body">
+            <h5 class="card-title">2. Reza Maulana & Azka Marchamah</h5>
+            <p class="card-text">Calon Kandidat Ketua & Wakil OSIS Nomor 2 Periode 2025 / 2026</p>
+            <a href="../kandidat.php" class="btn btn-secondary">Back</a>
+              <button class="btn btn-danger" name="submit">Vote</button>
 </form>
      </center>
 					</div>

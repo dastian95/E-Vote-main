@@ -49,45 +49,29 @@
       </div>
     </div>
   </div>
+<?php
+session_start();
+include 'koneksi.php';
+
+if (isset($_POST['submit'])) {
+    $nisn = $_POST['nisn'];
+
+    $result = mysqli_query($conn, "SELECT * FROM voters WHERE Username = '$nisn'");
+    if (mysqli_num_rows($result) === 1) {
+        // Redirect sebelum ada output
+        $_SESSION['authenticated'] = true;
+        $_SESSION['nisn'] = $nisn;
+        header('Location: index.php');
+        exit;
+    } else {
+        echo "<script>
+            swal('Wrong Nisn / Password!!', 'Masukan Username dan Password dengan benar!!', 'error');
+            </script>";
+    }
+}
+
+include 'assets/footer.php';
+?>
 </body>
 
 </html>
-<?php
-session_start();
-include 'assets/conn.php';
-include 'assets/footer.php';
-
-// hash cookie name
-$cookieNameHash = hash('sha256', 'remember_me');
-
-if (isset($_COOKIE[$cookieNameHash])) {
-  // Cookie exists, set session
-  $_SESSION['nisn'] = $_COOKIE[$cookieNameHash];
-  header('Location: index.php');
-  exit;
-} else if (isset($_POST['submit'])) {
-  // User submitted login form
-  $nisn = $_POST['nisn'];
-  // $password = $_POST['password'];
-
-  $result = mysqli_query($conn, "SELECT * FROM voters WHERE Username = '$nisn'");
-
-  if (mysqli_num_rows($result) === 1) {
-    $_SESSION['nisn'] = $nisn;
-
-    // Set remember me cookie
-    if (isset($_POST['remember-me']) && $_POST['remember-me'] == 'on') {
-      $cookieValue = $nisn;
-      $cookieNameHash = hash('sha256', 'remember_me');
-      setcookie($cookieNameHash, $cookieValue, time() + (60), "/");
-    }
-
-    header('Location: index.php');
-    exit;
-  } else {
-    echo "<script>
-      swal('Wrong Nisn / Password!!', 'Masukan Username dan Password dengan benar!!', 'error');
-      </script>";
-  }
-}
-?>

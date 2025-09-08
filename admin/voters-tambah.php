@@ -28,7 +28,7 @@ if(isset($_POST['proses'])){
     $name = $_POST['name'];
     $class = $_POST['class'];
     $username = $_POST['username'];
-    $queryTambah = mysqli_query($koneksi,"INSERT INTO `voters`(`name`, `class`, `Username`, `Password`, `ready`) VALUES ('$name','$class','$username','-','1')");
+    $queryTambah = mysqli_query($conn ,"INSERT INTO `voters`(`name`, `class`, `Username`, `Password`, `ready`) VALUES ('$name','$class','$username','-','1')");
 
     if ($queryTambah) {
 

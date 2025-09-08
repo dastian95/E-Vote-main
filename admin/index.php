@@ -59,7 +59,7 @@ if (!isset($_SESSION['username'])) {
             <?php
             include "koneksi.php";
             $no = 1;
-            $ambildata = mysqli_query($koneksi, "select * from voters");
+            $ambildata = mysqli_query($conn, "select * from voters");
             while ($tampil = mysqli_fetch_array($ambildata)) {
               echo "
                   <tr>
@@ -103,7 +103,7 @@ if (!isset($_SESSION['username'])) {
           $name = $_POST['name'];
           $class = $_POST['class'];
           $username = $_POST['username'];
-          $queryTambah = mysqli_query($koneksi,"INSERT INTO `voters`(`name`, `class`, `Username`, `Password`, `ready`) VALUES ('$name','$class','$username','-','0')");
+          $queryTambah = mysqli_query($conn,"INSERT INTO `voters`(`name`, `class`, `Username`, `Password`, `ready`) VALUES ('$name','$class','$username','-','0')");
           if ($queryTambah) {
               echo "Data Tersimpan";
               ?>

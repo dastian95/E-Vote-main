@@ -35,7 +35,7 @@ $result2 = mysqli_query($conn,"SELECT * FROM candidates ORDER BY vote_count desc
          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-         <a class="nav-link" href="kandidat.html">Vote Results</a>
+         <a class="nav-link" href="results.php">Vote Results</a>
         </li>
         <li class="nav-item">
          <a class="nav-link" href="../logout.php">Logout</a>

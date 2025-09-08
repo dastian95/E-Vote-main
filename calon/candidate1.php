@@ -55,20 +55,12 @@ $ready = $row['ready'];
 	 <h1 class="my-3">Visi dan Misi Kandidat Nomor 1</h1>
   <h5>Visi: </h5>
   <ol>
-    <li>Login ke akun E-Vote yang sudah di berikan.</li>
-    <li>Pilih kandidat yang Anda ingin mendukung.</li>
-    <li>Klik tombol "Detail" pada kartu kandidat untuk melihat profil dan program kerjanya.</li>
-    <li>Setelah memilih, klik tombol "Vote" pada kartu kandidat.</li>
-    <li>Anda hanya dapat memilih satu kandidat untuk setiap posisi.</li>
-    <li>Setelah memilih, Anda tidak dapat mengubah pilihan Anda.</li>
-    <li>Setelah selesai memilih, klik tombol "Logout" untuk keluar dari akun.</li>
+    <li>Menjadikan OSIS sebagai pandangan yang mempunya jiwa kepemimpinan, akhlak yang baik, serta berkarakter.</li>
   </ol>
   <h5>Misi: </h5>
   <ul>
-    <li>Hanya siswa yang terdaftar di sekolah ini yang dapat memilih.</li>
-    <li>Setiap siswa hanya dapat memberikan satu suara untuk setiap posisi.</li>
-    <li>Suara yang sudah diberikan tidak dapat diubah.</li>
-    <li>Setiap suara akan dihitung dan diverifikasi oleh panitia pemilihan.</li>
+    <li>Menjadi teladan dalam kepemimpinan (leadership) dengan bersikap disiplin, bertanggung jawab, serta mampu bekerja sama dengan seluruh pengurus OSIS dan warga sekolah.</li>
+    <li>Menumbuhkan akhlak mulia melalui kegiatan keagamaan, sosial, dan budaya yang membangun sikap peduli, santun, serta menghargai</li>
   </ul>
 		<br>
 		<div class="row">
@@ -79,13 +71,13 @@ $ready = $row['ready'];
 			<form method="POST">
 			<div class="col-md-4">
 				<div class="card">
-					<img src="https://i.ibb.co.com/m6qv1t8/Untitled.png" class="card-img-top" alt="Candidate 1">
+					<img src="https://i.ibb.co.com/ZRWK3gnk/3.png" class="card-img-top" alt="Candidate 1">
 					<div class="card-body">
-						<h5 class="card-title">1. Anos Voldigoad</h5>
-						<p class="card-text">Calon Kandidat Ketua OSIS Nomor 2 Periode 2030 / 2031</p>
-      <a href="../kandidat.php" class="btn btn-secondary">Back</a>
-						<button class="btn btn-danger" name="submit">Vote</button>
-</form>
+						<h5 class="card-title">1. Ghina Julimar Andana & Zahratussyita</h5>
+						<p class="card-text">Calon Kandidat Ketua & Wakil OSIS Nomor 1 Periode 2025 / 2026</p>
+            <a href="../kandidat.php" class="btn btn-secondary">Back</a>
+						  <button class="btn btn-danger" name="submit">Vote</button>
+      </form>
 					</center>
 					</div>
 				</div>

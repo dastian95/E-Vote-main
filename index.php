@@ -1,12 +1,12 @@
 <?php
  session_start();
- include 'assets/conn.php';
+ include 'koneksi.php';
 
- if (!isset($_SESSION['nisn'])) {
+if (!isset($_SESSION['authenticated'])||$_SESSION['authenticated'] !== true) {
   header('Location: login.php');
 }
 
-$nisn = $_SESSION['nisn'];
+$nisn = $_POST['nisn'];
 $query = "SELECT * FROM voters WHERE Username='$nisn'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
@@ -46,7 +46,7 @@ $row = mysqli_fetch_assoc($result);
  </nav>
 	<div class="container">
   <br><br>
-		<h1 class="my-3">Selamat Datang Di Webiste E-Vote Pemilihan Ketua Osis tahun 2024 / 2025</h1>
+		<h1 class="my-3">Selamat Datang Di Webiste E-Vote Pemilihan Ketua Osis tahun 2025 / 2026</h1>
   <p>Ini adalah sebuah platform atau website voting online yang dirancang khusus untuk membantu proses pemilihan ketua osis yang baru di sekolah. Platform ini dirancang untuk memberikan kemudahan, keterbukaan, dan transparansi dalam proses pemilihan, sehingga seluruh siswa dan siswi dapat terlibat secara aktif dalam proses pemilihan.</p>
 		<p>Dengan webiste ini, proses pemilihan menjadi lebih mudah, cepat dan efisien. Karena kalau masih melakukan voting dengan kertas, itu hanya akan menambah limbah saja dan tidak memanfaatkan teknologi pada zaman sekarang. Lalu pemilih dapat mengakses platform ini dengan mudah, menggunakan perangkat apapun yang mereka miliki, baik itu laptop, smartphone, atau tablet. Dalam platform ini, pemilih dapat melihat beberapa kandidat yang menjadi calon ketua osis, mengetahui profil dan visi misi mereka, serta memberikan suara dengan mudah dan cepat.</p>
 <br><br>

@@ -55,17 +55,13 @@ $ready = $row['ready'];
 	 <h1 class="my-3">Visi dan Misi Kandidat Nomor 2</h1>
   <h5>Visi: </h5>
   <ol>
-    <li>Membuat indonesia menjadi penguasa asia</li>
-    <li>Membuat indonesia menjadi negara No.1 di dunia</li>
-    <li>Membuat seluruh masyarakat setara pekerjaan, ekonomi, tampang, dll</li>
+    <li>Menciptakan kepengurusan OSIS yang aktif, kreatif, bertanggung jawab, dan solid, serta menjadikan OSIS sebagai wadah aspirasi siswa-siswi SMK Laboratorium untuk membentuk generasi yang berakhlak mulia, berintegritas, dan peduli terhadap lingkungan sekitar.</li>
   </ol>
   <h5>Misi: </h5>
   <ul>
-    <li>merevolisi indonesia</li>
-    <li>mebuat pertanian dan membuat prinsip kesetaraan</li>
-    <li>menguasai seluruh wilayah asia ternggara</li>
-    <li>menyatakan kemerdekaan kepada palestina dan membatai habis kau yahudi</li>
-    <li>berfokus dalam teknologi dan Artificial Intelligence</li>
+    <li>Mengoptimalkan peran OSIS sebagai penggerak perubahan positif di lingkungan sekolah melalui program-program yang inovatif, dan relevan.</li>
+    <li>Mendorong partisipasi aktif siswa-siswi dalam setiap kegiatan dan program sekolah.</li>
+    <li>Membentuk siswa-siswi SMK Laboratorium yang disiplin, beradab, dan menjunjung tinggi nilai-nilai moral serta akhlak mulia.</li>
   </ul>
 		<br>
 		<div class="row">
@@ -74,11 +70,11 @@ $ready = $row['ready'];
 			<form method="POST">
 			<div class="col-md-4">
 				<div class="card">
-					<img src="https://i.ibb.co.com/YT2sgw1h/adolf-dzaky.webp" class="card-img-top" alt="Candidate 1">
+					<img src="https://i.ibb.co.com/rRzjJKCY/1.png" class="card-img-top" alt="Candidate 1">
 					<div class="card-body">
-						<h5 class="card-title">3. Aufa dzaky</h5>
-						<p class="card-text">Calon Kandidat Ketua OSIS Nomor 1 Periode 2030 / 2031</p>
-      <a href="../kandidat.php" class="btn btn-secondary">Back</a>
+						<h5 class="card-title">3. Firyal Carissa Keysha & Dian Ratna Hafsari</h5>
+						<p class="card-text">Calon Kandidat Ketua & Wakil OSIS Nomor 3 Periode 2025 / 2026</p>
+            <a href="../kandidat.php" class="btn btn-secondary">Back</a>
 						<button class="btn btn-danger" name="submit">Vote</button>
 </form>
      </center>
