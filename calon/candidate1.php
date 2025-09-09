@@ -100,7 +100,7 @@ if ($ready == 1) {
         $nisn = $_SESSION['nisn']; // pastikan pakai variabel ini
 
         // update vote count
-        $query2 = "UPDATE candidates SET vote_count = vote_count + 1 WHERE id = 2";
+        $query2 = "UPDATE candidates SET vote_count = vote_count + 1 WHERE id = 1";
         
         // update voter status
         $query3 = "UPDATE voters SET ready = 1 WHERE Username = '$nisn'";

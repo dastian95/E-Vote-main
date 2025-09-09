@@ -1,5 +1,5 @@
 # Online Voting System
-This is an online voting system that allows users to vote for candidates in an election. It is a web-based application that can be accessed from anywhere with an internet connection. The system is designed to be user-friendly and easy to navigate, allowing voters to cast their ballots quickly and easily.
+This is an online voting system that allows users to vote for candidates in an election. It is a web-based application that can be accessed from anywhere with an internet connection. The system is designed to be user-friendly and easy to navigate, allowing voters to cast their ballots quickly and easily
 
 # Requirements
 - Web server (Apache, Nginx, Xampp, dll.) 
