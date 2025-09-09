@@ -1,8 +1,8 @@
 <?php
 session_start();
-include '../assets/conn.php';
+include '../koneksi.php';
 
-if (!isset($_SESSION['nisn'])) {
+if (!isset($_SESSION['authenticated'])||$_SESSION['authenticated'] !== true) {
   header('Location: login.php');
 }
 
@@ -28,7 +28,7 @@ $ready = $row['ready'];
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
-   <a class="navbar-brand" href="index.php">E-Vote</a>
+   <a class="navbar-brand" href="../index.php">E-Vote</a>
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
    </button>
@@ -55,7 +55,7 @@ $ready = $row['ready'];
 	 <h1 class="my-3">Visi dan Misi Kandidat Nomor 2</h1>
   <h5>Visi: </h5>
   <ol>
-    <li>“Mewujudkan OSIS yang aktif, kreatif, dan solutif sebagai wadah aspirasi serta penggerak aksi nyata bagi seluruh siswa.”</li>
+    <a>“Mewujudkan OSIS yang aktif, kreatif, dan solutif sebagai wadah aspirasi serta penggerak aksi nyata bagi seluruh siswa.”</a>
   </ol>
   <h5>Misi: </h5>
   <ul>
@@ -92,29 +92,29 @@ $ready = $row['ready'];
 <?php 
 	if ($ready == 1) {
 		echo"<script>
-		window.location = 'already_voted.php';
+		    window.location = 'already_voted.php';
 		</script>";
   exit();
-}
-else {
+ }else {
 		if (isset($_POST['submit'])) {
-			$name = $_SESSION['nisn'];
+			$nisn = $_SESSION['nisn'];
 
 			// update vote count
 			$query2 = "UPDATE candidates SET vote_count = vote_count + 1 WHERE id = 2";
 			
 			// update voter status
-			$query3 = "UPDATE voters SET ready = 1 WHERE nisn = '$nisn'";
-if ($conn->query($query2) && $conn->query($query3)) {
-  $result = mysqli_query($conn, "SELECT ready FROM voters WHERE nisn='$nisn'");
-  $row = mysqli_fetch_assoc($result);
-  $ready = $row['ready'];
-		echo "<script>
-		swal('Berhasil Voting!!', 'Terimakasih telah memvoting', 'success');
-		</script>";
-} else {
-  echo "Error: " . $query2 . "<br>" . $conn->error;
-}
+			$query3 = "UPDATE voters SET ready = 1 WHERE Username = '$nisn'";
+
+      if ($conn->query(query: $query2) && $conn->query($query3)) {
+          $result = mysqli_query($conn, "SELECT ready FROM voters WHERE Username='$nisn'");
+          $row = mysqli_fetch_assoc($result);
+          $ready = $row['ready'];
+          echo "<script>
+              swal('Berhasil Voting!!', 'Terimakasih telah memvoting', 'success');
+          </script>";
+      } else {
+          echo "Error: " . $query2 . "<br>" . $conn->error;
+      }
 
 		}
 	}

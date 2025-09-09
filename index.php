@@ -6,7 +6,7 @@ if (!isset($_SESSION['authenticated'])||$_SESSION['authenticated'] !== true) {
   header('Location: login.php');
 }
 
-$nisn = $_POST['nisn'];
+$nisn = $_SESSION['nisn'];
 $query = "SELECT * FROM voters WHERE Username='$nisn'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
